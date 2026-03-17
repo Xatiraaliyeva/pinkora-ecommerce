@@ -11,7 +11,7 @@ import { sendMail } from "../utils/mailer.js";
 
 const REFRESH_DAYS = 7;
 
-// ✅ BURANI DƏQİQ ET: xatiree81 mailin necədirsə elə yaz
+
 const ADMIN_EMAIL = "xatiree81@gmail.com";
 
 const isBootstrapAdmin = (email) =>
@@ -19,7 +19,6 @@ const isBootstrapAdmin = (email) =>
 
 const hashToken = async (t) => hashValue(t);
 
-// ✅ createSession export qalır (səndə artıq belədir)
 export const createSession = async (res, user) => {
   const payload = { id: user._id.toString(), role: user.role };
 
@@ -50,7 +49,6 @@ export const register = async (req, res, next) => {
 
     const passwordHash = await hashValue(password);
 
-    // ✅ FIX: xatiree81 maili register olanda admin role alsın
     const user = await User.create({
       username,
       email: email.toLowerCase(),
@@ -79,7 +77,7 @@ export const login = async (req, res, next) => {
     const ok = await compareValue(password, user.passwordHash);
     if (!ok) throw new ApiError(401, "Invalid credentials");
 
-    // ✅ FIX: user əvvəldən "user" olsa belə, xatiree81 mailidirsə admin-ə qaldır
+    
     if (isBootstrapAdmin(user.email) && user.role !== "admin") {
       user.role = "admin";
       await user.save();
@@ -140,7 +138,6 @@ export const verifyOtp = async (req, res, next) => {
     const user = await User.findOne({ email: normalized });
     if (!user) throw new ApiError(404, "User not found");
 
-    // ✅ burada da problem yoxdur: user admin olduysa createSession role=admin yazacaq
     const data = await createSession(res, user);
     res.json(data);
   } catch (e) {
@@ -177,7 +174,6 @@ export const refresh = async (req, res, next) => {
     const user = await User.findById(payload.id);
     if (!user) throw new ApiError(404, "User not found");
 
-    // ✅ refresh zamanı da admin mailidirsə admin-ə qaldır (təhlükəsiz)
     if (isBootstrapAdmin(user.email) && user.role !== "admin") {
       user.role = "admin";
       await user.save();
@@ -244,7 +240,6 @@ export const forgotPassword = async (req, res, next) => {
   }
 };
 
-// reset password (email + otp + newPassword)
 export const resetPassword = async (req, res, next) => {
   try {
     const { email, code, newPassword } = req.body;
