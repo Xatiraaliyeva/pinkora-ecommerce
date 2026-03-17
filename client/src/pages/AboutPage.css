@@ -1,0 +1,68 @@
+.about-page {
+  min-height: calc(100vh - 160px);
+  background: #f8f8f8;
+  padding: 40px 20px 60px;
+}
+
+.about-page__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-page__card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 36px 28px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.about-page__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #f1f1f1;
+  color: #111111;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.about-page__title {
+  margin: 0 0 18px;
+  color: #111111;
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+.about-page__text {
+  margin: 0 0 16px;
+  color: #4f4f4f;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.about-page__text:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding: 24px 14px 40px;
+  }
+
+  .about-page__card {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+
+  .about-page__title {
+    font-size: 26px;
+  }
+
+  .about-page__text {
+    font-size: 15px;
+  }
+}

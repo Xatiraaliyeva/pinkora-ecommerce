@@ -1,0 +1,203 @@
+.admin-dashboard {
+  width: 100%;
+  color: #e5eefc;
+}
+
+.admin-dashboard__hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+  padding: 22px;
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, rgba(14, 24, 46, 0.94) 0%, rgba(10, 17, 31, 0.98) 55%, rgba(8, 20, 30, 0.96) 100%);
+  border: 1px solid rgba(96, 165, 250, 0.14);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+.admin-dashboard__hero-content {
+  flex: 1;
+}
+
+.admin-dashboard__eyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(96, 165, 250, 0.1);
+  color: #cfe1ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.admin-dashboard__title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #f8fbff;
+  letter-spacing: -0.02em;
+}
+
+.admin-dashboard__subtitle {
+  margin: 10px 0 0;
+  max-width: 760px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #94a3b8;
+}
+
+.admin-dashboard__hero-badge {
+  min-width: 160px;
+  padding: 16px 18px;
+  border-radius: 22px;
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(17, 41, 90, 0.84) 0%, rgba(13, 26, 52, 0.9) 55%, rgba(10, 37, 32, 0.84) 100%);
+  border: 1px solid rgba(96, 165, 250, 0.14);
+  box-shadow:
+    0 16px 34px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  flex-shrink: 0;
+}
+
+.admin-dashboard__hero-badge-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  color: #c0d4f5;
+}
+
+.admin-dashboard__hero-badge-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.admin-dashboard__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.admin-dashboard__card {
+  padding: 20px;
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, rgba(20, 36, 68, 0.9) 0%, rgba(13, 23, 42, 0.96) 55%, rgba(10, 25, 32, 0.92) 100%);
+  border: 1px solid rgba(96, 165, 250, 0.12);
+  box-shadow:
+    0 12px 26px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.admin-dashboard__icon {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 14px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(18, 33, 62, 0.92) 0%, rgba(12, 22, 42, 0.96) 50%, rgba(10, 20, 30, 0.96) 100%);
+  border: 1px solid rgba(96, 165, 250, 0.12);
+  font-size: 24px;
+}
+
+.admin-dashboard__card-title {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #f8fbff;
+}
+
+.admin-dashboard__card-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #b4c5db;
+}
+
+.admin-dashboard__info {
+  padding: 20px;
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, rgba(14, 24, 46, 0.94) 0%, rgba(10, 17, 31, 0.98) 55%, rgba(8, 20, 30, 0.96) 100%);
+  border: 1px solid rgba(96, 165, 250, 0.14);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+.admin-dashboard__info-title {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #f8fbff;
+}
+
+.admin-dashboard__info-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #a8bbd6;
+}
+
+@media (max-width: 992px) {
+  .admin-dashboard__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard__hero {
+    flex-direction: column;
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .admin-dashboard__hero-badge {
+    width: 100%;
+  }
+
+  .admin-dashboard__title {
+    font-size: 25px;
+  }
+
+  .admin-dashboard__card,
+  .admin-dashboard__info {
+    padding: 16px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-dashboard__title {
+    font-size: 22px;
+  }
+
+  .admin-dashboard__subtitle,
+  .admin-dashboard__card-text,
+  .admin-dashboard__info-text {
+    font-size: 13px;
+  }
+
+  .admin-dashboard__card-title,
+  .admin-dashboard__info-title {
+    font-size: 18px;
+  }
+
+  .admin-dashboard__icon {
+    width: 46px;
+    height: 46px;
+    font-size: 21px;
+    border-radius: 14px;
+  }
+}

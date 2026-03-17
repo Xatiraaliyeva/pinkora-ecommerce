@@ -1,0 +1,315 @@
+.admin-users {
+  width: 100%;
+  background: transparent;
+  color: #e5eefc;
+}
+
+.admin-users__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.admin-users__heading {
+  flex: 1;
+}
+
+.admin-users__title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #f8fbff;
+  letter-spacing: -0.02em;
+}
+
+.admin-users__subtitle {
+  margin: 8px 0 0;
+  max-width: 760px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #94a3b8;
+}
+
+.admin-users__stats {
+  flex-shrink: 0;
+}
+
+.admin-users__stat-card {
+  min-width: 160px;
+  padding: 16px 18px;
+  border-radius: 22px;
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(17, 41, 90, 0.84) 0%, rgba(13, 26, 52, 0.9) 55%, rgba(10, 37, 32, 0.84) 100%);
+  border: 1px solid rgba(96, 165, 250, 0.14);
+  box-shadow:
+    0 16px 34px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.admin-users__stat-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  color: #c0d4f5;
+}
+
+.admin-users__stat-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.admin-users__panel {
+  padding: 20px;
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, rgba(14, 24, 46, 0.94) 0%, rgba(10, 17, 31, 0.98) 55%, rgba(8, 20, 30, 0.96) 100%);
+  border: 1px solid rgba(96, 165, 250, 0.14);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+.admin-section-header {
+  margin-bottom: 16px;
+}
+
+.admin-section-header__title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #f8fbff;
+}
+
+.admin-section-header__text {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #a8bbd6;
+}
+
+.user-list {
+  display: grid;
+  gap: 14px;
+}
+
+.user-item {
+  padding: 16px;
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(20, 36, 68, 0.9) 0%, rgba(13, 23, 42, 0.96) 55%, rgba(10, 25, 32, 0.92) 100%);
+  border: 1px solid rgba(96, 165, 250, 0.12);
+  box-shadow:
+    0 12px 26px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.user-item__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.user-item__info {
+  min-width: 0;
+  flex: 1;
+}
+
+.user-item__top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.user-item__name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: #f8fbff;
+  word-break: break-word;
+}
+
+.user-item__email {
+  margin: 0;
+  color: #bfd2ec;
+  font-size: 14px;
+  line-height: 1.7;
+  word-break: break-word;
+}
+
+.user-item__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  color: #d2e2f8;
+  font-size: 13px;
+}
+
+.user-item__meta span {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(96, 165, 250, 0.1);
+}
+
+.user-item__badge {
+  flex-shrink: 0;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.12);
+  color: #dbeafe;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.user-item__badge--main {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.18);
+  color: #bbf7d0;
+}
+
+.user-item__actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.user-item__select {
+  min-height: 42px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(96, 165, 250, 0.14);
+  outline: none;
+  background:
+    linear-gradient(180deg, rgba(11, 19, 35, 0.96) 0%, rgba(15, 27, 50, 0.98) 100%);
+  color: #f8fbff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+.user-item__select:focus {
+  border-color: rgba(96, 165, 250, 0.24);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.user-item__select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.user-item__delete-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 14px;
+  background:
+    linear-gradient(135deg, rgba(58, 22, 22, 0.78) 0%, rgba(40, 18, 18, 0.88) 100%);
+  border: 1px solid rgba(239, 68, 68, 0.12);
+  color: #ef9a9a;
+  font-size: 13px;
+  font-weight: 800;
+  transition: all 0.22s ease;
+}
+
+.user-item__delete-btn:hover:not(:disabled) {
+  color: #ffffff;
+  transform: translateY(-1px);
+  background:
+    linear-gradient(135deg, rgba(70, 24, 24, 0.84) 0%, rgba(47, 18, 18, 0.92) 100%);
+}
+
+.user-item__delete-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.admin-users__state {
+  padding: 22px 16px;
+  text-align: center;
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(15, 26, 48, 0.94) 0%, rgba(10, 17, 31, 0.98) 100%);
+  border: 1px dashed rgba(148, 163, 184, 0.18);
+  color: #aec0d8;
+  font-size: 14px;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .admin-users__top {
+    flex-direction: column;
+  }
+
+  .admin-users__stat-card {
+    width: 100%;
+  }
+
+  .admin-users__panel {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .admin-users__title {
+    font-size: 25px;
+  }
+
+  .user-item__top,
+  .user-item__top-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-item__actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .user-item__select,
+  .user-item__delete-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-users__title {
+    font-size: 22px;
+  }
+
+  .admin-users__subtitle,
+  .admin-section-header__text {
+    font-size: 13px;
+  }
+
+  .admin-section-header__title {
+    font-size: 18px;
+  }
+
+  .user-item {
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .user-item__name {
+    font-size: 16px;
+  }
+
+  .user-item__email,
+  .user-item__select,
+  .user-item__delete-btn {
+    font-size: 13px;
+  }
+}

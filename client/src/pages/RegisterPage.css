@@ -1,0 +1,339 @@
+.register-page {
+  min-height: 100vh;
+  width: 100%;
+  padding: 24px 16px;
+
+  background:
+    radial-gradient(circle at top left, rgba(214, 110, 140, 0.55), transparent 32%),
+    radial-gradient(circle at top right, rgba(255, 150, 180, 0.5), transparent 34%),
+    radial-gradient(circle at bottom left, rgba(198, 90, 130, 0.5), transparent 36%),
+    radial-gradient(circle at bottom right, rgba(255, 170, 200, 0.55), transparent 34%),
+    linear-gradient(135deg, #fff5f7 0%, #f5dde3 45%, #edd0d8 100%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.register-page::before,
+.register-page::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.register-page::before {
+  width: 420px;
+  height: 420px;
+  top: -140px;
+  left: -140px;
+  background: radial-gradient(circle, rgba(255, 120, 160, 0.55), transparent 65%);
+  filter: blur(20px);
+  box-shadow:
+    0 0 120px rgba(255, 120, 160, 0.35),
+    0 0 200px rgba(255, 150, 180, 0.25);
+}
+
+.register-page::after {
+  width: 460px;
+  height: 460px;
+  right: -160px;
+  bottom: -160px;
+  background: radial-gradient(circle, rgba(220, 90, 140, 0.5), transparent 70%);
+  filter: blur(22px);
+  box-shadow:
+    0 0 140px rgba(220, 90, 140, 0.3),
+    0 0 220px rgba(255, 150, 180, 0.25);
+}
+
+.register-page__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 248, 250, 0.1);
+  backdrop-filter: blur(1.5px);
+}
+
+.register-page__container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-page__card {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  box-shadow:
+    0 30px 70px rgba(131, 92, 104, 0.22),
+    0 60px 140px rgba(131, 92, 104, 0.18),
+    0 0 0 1px rgba(255, 255, 255, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.88);
+}
+
+.register-page__card::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -34px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(244, 208, 220, 0.28);
+  box-shadow:
+    0 0 0 24px rgba(255, 239, 239, 0.16),
+    0 0 60px rgba(243, 208, 215, 0.12);
+  z-index: 0;
+}
+
+.register-page__card::after {
+  content: "";
+  position: absolute;
+  left: -42px;
+  bottom: 34px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: rgba(243, 208, 215, 0.18);
+  box-shadow:
+    0 0 0 18px rgba(255, 239, 239, 0.16),
+    0 0 48px rgba(243, 208, 215, 0.1);
+  z-index: 0;
+}
+
+.register-page__form {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 18px;
+  padding: 34px 30px;
+}
+
+.register-page__title {
+  margin: 0;
+  text-align: center;
+  font-size: 38px;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #5c4549;
+}
+
+.register-page__subtitle {
+  margin: -4px 0 4px;
+  text-align: center;
+  color: rgba(92, 69, 73, 0.82);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.register-page__field {
+  display: grid;
+  gap: 8px;
+}
+
+.register-page__label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #6f565b;
+}
+
+.register-page__input {
+  width: 100%;
+  height: 56px;
+  border: 1px solid rgba(243, 208, 215, 0.5);
+  border-radius: 16px;
+  padding: 0 16px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.78);
+  color: #4f3d41;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    0 10px 20px rgba(210, 180, 180, 0.08);
+}
+
+.register-page__input::placeholder {
+  color: #aa8d92;
+}
+
+.register-page__input:focus {
+  border-color: #d9a8b2;
+  box-shadow:
+    0 0 0 4px rgba(233, 191, 200, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.register-page__button {
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #eabfc8 0%, #dca5b0 100%);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  box-shadow:
+    0 16px 30px rgba(176, 138, 138, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+
+.register-page__button:hover {
+  background: linear-gradient(135deg, #e1b4be 0%, #cf97a2 100%);
+  transform: translateY(-3px);
+  box-shadow:
+    0 20px 34px rgba(176, 138, 138, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.register-page__message {
+  padding: 13px 15px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #fffefe 0%, #ffefef 100%);
+  color: #785f63;
+  font-size: 14px;
+  border: 1px solid rgba(243, 208, 215, 0.22);
+  box-shadow:
+    0 10px 20px rgba(210, 180, 180, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.register-page__footer {
+  text-align: center;
+  font-size: 14px;
+  color: #6d5458;
+}
+
+.register-page__link {
+  color: #b26f7d;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.register-page__link:hover {
+  color: #8f5864;
+}
+
+/* ---------- LARGE TABLET ---------- */
+@media (max-width: 992px) {
+  .register-page {
+    padding: 20px 14px;
+  }
+
+  .register-page__card {
+    max-width: 470px;
+    border-radius: 28px;
+  }
+
+  .register-page__title {
+    font-size: 34px;
+  }
+}
+
+/* ---------- TABLET ---------- */
+@media (max-width: 768px) {
+  .register-page {
+    padding: 20px 12px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .register-page__card {
+    max-width: 100%;
+    border-radius: 24px;
+  }
+
+  .register-page__form {
+    padding: 24px 18px;
+    gap: 16px;
+  }
+
+  .register-page__title {
+    font-size: 30px;
+  }
+
+  .register-page__subtitle {
+    font-size: 14px;
+  }
+
+  .register-page__input {
+    height: 50px;
+    border-radius: 14px;
+    font-size: 14px;
+  }
+
+  .register-page__button {
+    height: 52px;
+    border-radius: 16px;
+    font-size: 15px;
+  }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 480px) {
+  .register-page {
+    padding: 16px 10px;
+  }
+
+  .register-page__card {
+    border-radius: 22px;
+  }
+
+  .register-page__form {
+    padding: 18px 14px;
+    gap: 14px;
+  }
+
+  .register-page__title {
+    font-size: 26px;
+  }
+
+  .register-page__subtitle {
+    font-size: 13px;
+  }
+
+  .register-page__label {
+    font-size: 13px;
+  }
+
+  .register-page__input {
+    height: 46px;
+    padding: 0 13px;
+    font-size: 13px;
+    border-radius: 13px;
+  }
+
+  .register-page__button {
+    height: 48px;
+    font-size: 14px;
+    border-radius: 14px;
+  }
+
+  .register-page__footer {
+    font-size: 13px;
+  }
+
+  .register-page__message {
+    font-size: 13px;
+    padding: 11px 12px;
+  }
+}
